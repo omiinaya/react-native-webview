@@ -5,8 +5,7 @@ class MyWeb extends Component {
   render() {
     return (
       <WebView
-        source={{ uri: 'https://omiinaya.netlify.app/' }}
-        style={{ marginTop: 20 }}
+        source={{ uri: 'https://servantapp.herokuapp.com/' }}
       />
     );
   }
