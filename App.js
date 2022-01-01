@@ -6,16 +6,6 @@ class MyWeb extends Component {
     super(props);
     
   }
-  webView = {
-    canGoBack: false,
-    ref: null,
-  };
-  onShouldStartLoadWithRequest = (navigator) => {
-    
-    this.webView.ref.stopLoading();
-    return false;
-
-};
   render() {
     return (
       <WebView
@@ -25,10 +15,6 @@ class MyWeb extends Component {
         javaScriptEnabled={true}
         domStorageEnabled={true}
         source={{ uri: 'https://servantapp.herokuapp.com/' }}
-        ref={(webView) => {
-          this.webView.ref = webView;
-        }}
-        onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
       />
     );
   }
